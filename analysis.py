@@ -46,15 +46,8 @@ print('Patients under 54 diagnosis ratio: {} %'.format(round(data[data['age']<=5
 
 #Sex
 plt.hist(data[data['target']==1].sex)
-
-#Cholestrol
-pain_types = ['Typical Angina', 'Atypical Angina', 'Non-anginal Pain', 'Asymptomatic']
-for i in range (0,4):
-    cp_mean = data[data['cp']==i]['target'].mean()
-    cp_mean = round(cp_mean, 3)
-    print('Heart disease risk for {} is {} %'.format(pain_types[i], cp_mean*100))
     
-#cholestrol...
+#cholestrol
 plt.figure(figsize=(16,19))
 plt.subplots_adjust(hspace=0.5, wspace=0.3)
 plt.subplot(423)
